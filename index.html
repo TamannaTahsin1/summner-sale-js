@@ -1,11 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- tailwind and  daisyUI link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Work+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- css links -->
+    <style>
+        .font-sans{
+            font-family: 'Lato', sans-serif;
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+    <!-- for customization -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                colors:{
+                    'btn-clr':'#F9F6E2',
+                }
+            }
+          }
+        }
+      </script>
 </head>
 <body>
-    
+    <header>
+        <!-- banner section starts here -->
+        <section class="mx-auto ">
+            <div class="hero min-h-screen bg-base-200 bg-[#f5f1d5]">
+                <div class="hero-content flex-col lg:flex-row-reverse justify-between gap-36 ">
+                  <img src="images/Summer 1.png" class="max-w-sm rounded-lg shadow-2xl" />
+                  <div>
+                    <p class="text-lg mb-4 font-bold text-center">---SALE FEVER---</p>
+                    <h1 class="text-5xl font-bold mb-16">Purchase TK 200 or <br>
+                         above & get <span class="text-pink-600">20% off</span></h1>
+            <div class="flex gap-5 mt-5 justify-center"> 
+                <p class="py-3 font-bold">Use Promo Code</p>
+                <button class="btn btn-primary ">SELL200</button>
+            </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+          <!-- banner section ends here -->
+    </header>
+    <main></main>
+    <footer></footer>
+
+
+
+    <!-- javaScript link -->
+    <script src="js/sale.js"></script>
 </body>
 </html>
