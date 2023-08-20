@@ -31,16 +31,19 @@ document.getElementById('btn-apply').addEventListener('click', function () {
     const inputValue = document.getElementById('apply-coupon');
     const inputValueText = inputValue.value;
     if (inputValueText === 'SELL200') {
-        const getDiscount = totalPrice * 0.4;
-        const discountPrice = getDiscount.toFixed(2);
-        // console.log();
-        document.getElementById('discount').innerText = discountPrice;
-        const offerPrice = totalPrice - getDiscount;
-
-        document.getElementById('offer').innerText = offerPrice;
+        const discountValue = totalPrice * 0.2;
+        const discountAmount = discountValue.toFixed(2);
+        document.getElementById('discount').innerText = discountAmount;
+        const offerAmount = totalPrice - discountValue;
+        document.getElementById('offer').innerText = offerAmount;
     }
     else{
         alert('Please insert your Coupon Code')
     }
     return inputValueText;
+})
+
+// // to go back home page
+document.getElementById('btn-home').addEventListener('click', function () {
+    window.location.reload();
 })

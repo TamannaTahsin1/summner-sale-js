@@ -34,8 +34,8 @@
 <body>
     <header>
         <!-- banner section starts here -->
-        <section class="mx-auto ">
-            <div class="hero min-h-screen bg-base-200 bg-[#f5f1d5]">
+        <section class="mx-auto">
+            <div class="hero lg:min-h-screen bg-base-200 bg-[#f5f1d5]">
                 <div class="hero-content flex-col lg:flex-row-reverse justify-between gap-36 ">
                   <img src="images/Summer 1.png" class="max-w-sm rounded-lg shadow-2xl" />
                   <div>
@@ -54,12 +54,12 @@
     </header>
     <main>
       <!-- kitchenware section starts here -->
-      <section class="mt-32">
+      <section class="mt-32 ml-8 md:ml-48 lg:ml-16">
         <h2 class="text-4xl font-extrabold ml-24 mb-7">Kitchenware</h2>
       <!-- main container -->
       <div class="flex flex-col lg:flex-row">
         <!-- product container -->
-        <div class="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="flex-1 grid md:grid-cols-1 lg:grid-cols-3 gap-6">
           <!-- 1st card -->
           <button id="btn-one" onclick="handleClickBtn(this)">
           <div class="card w-96 bg-base-100 shadow-2xl">
@@ -152,14 +152,14 @@
               </p>
               <button id="btn-purchase" onclick="modal.showModal()" class="btn bg-[#e941bc] border-transparent text-white font-bold mt-4 px-10 mx-auto normal-case" disabled="">Make
                   Purchase</button>
-              <!-- Open the modal using ID.showModal() method -->
+              <!-- modal-->
               <dialog id="modal" class="modal">
                   <form method="dialog" class="modal-box">
                       <img class="mx-auto" src="./images/congo.png" alt="">
                       <h3 class="text-center font-bold text-3xl">Congratulations</h3>
-                      <p class="text-center py-4">Your Purchase the product</p>
+                      <p class="text-center py-4">You Purchase the product</p>
                       <div class="modal-action">
-                          <button id="btn-home" class="btn w-full normal-case">Go Home</button>
+                          <button id="btn-home" class="btn w-full normal-case bg-[#e941bc] text-white">Go Home</button>
                       </div>
                   </form>
               </dialog>
@@ -169,12 +169,12 @@
       </section>     
       <!-- Kitchen ware section ends here -->
       <!-- Sportswear section starts here -->
-      <section class="mt-16">
+      <section class="mt-16 ml-8 md:ml-48 lg:ml-16">
         <h2 class="text-4xl font-extrabold ml-24 mb-7">Sportswear</h2>
       <!-- main container -->
       <div class="flex flex-col lg:flex-row">
         <!-- product container -->
-        <div class="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="flex-1 grid md:grid-cols-1 lg:grid-cols-3 gap-6">
           <!-- 4th card -->
           <button id="" onclick="handleClickBtn(this)">
           <div class="card w-96 bg-base-100 shadow-2xl">
@@ -249,12 +249,12 @@
       </section>
       <!-- sports ware section ends here -->
       <!-- Furniture section starts here -->
-      <section class="mt-16 mb-36">
+      <section class="mt-16 mb-36 ml-5 md:ml-48 lg:ml-16">
         <h2 class="text-4xl font-extrabold ml-24 mb-7">Furniture</h2>
       <!-- main container -->
       <div class="flex flex-col lg:flex-row">
         <!-- product container -->
-        <div class="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="flex-1 grid md:grid-cols-1 lg:grid-cols-3 gap-6">
           <!-- 7th card -->
           <button id="" onclick="handleClickBtn(this)">
           <div class="card w-96 bg-base-100 shadow-2xl">
