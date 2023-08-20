@@ -1,3 +1,4 @@
+// for total price
 let totalPrice = 0;
 function handleClickBtn(target){
     // to get item names
@@ -25,16 +26,12 @@ function handleClickBtn(target){
     }
 }
 
-function getInputValue(fieldId) {
-    const inputField = document.getElementById(fieldId);
-    const inputValueText = inputField.value;
-    return inputValueText;
-}
-
+// for discount section
 document.getElementById('btn-apply').addEventListener('click', function () {
-    const inputValue = getInputValue('apply-coupon');
-    if (inputValue === 'SELL200') {
-        const getDiscount = totalPrice * 0.2;
+    const inputValue = document.getElementById('apply-coupon');
+    const inputValueText = inputValue.value;
+    if (inputValueText === 'SELL200') {
+        const getDiscount = totalPrice * 0.4;
         const discountPrice = getDiscount.toFixed(2);
         // console.log();
         document.getElementById('discount').innerText = discountPrice;
@@ -43,7 +40,7 @@ document.getElementById('btn-apply').addEventListener('click', function () {
         document.getElementById('offer').innerText = offerPrice;
     }
     else{
-        alert('Please enter a valid coupon code!')
+        alert('Please insert your Coupon Code')
     }
-
+    return inputValueText;
 })
