@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome to Summer Sale</title>
     <!-- tailwind and  daisyUI link  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -61,10 +61,11 @@
         <!-- product container -->
         <div class="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- 1st card -->
+          <button id="btn-one" onclick="handleClick(this)">
           <div class="card w-96 bg-base-100 shadow-2xl">
-            <figure class="px-10 pt-10">
-              <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
-            </figure>
+            <figure class="m-6 py-6 bg-[#7c7a7a0d]">
+              <img src="./images/prod1.png" alt="Accessories" class="rounded-xl py-4">
+          </figure>
             <div class="card-body items-center text-center">
               <div class="rating pb-4 pt-4">
                 <input type="radio" name="rating-1" class="mask mask-star-2 bg-[#e7a745]" />
@@ -79,11 +80,13 @@
               </div>
             </div>
           </div>
+        </button>
           <!-- 2nd card -->
+          <button id="" onclick="">
           <div class="card w-96 bg-base-100 shadow-2xl">
-            <figure class="px-10 pt-10">
-              <img src="images/prod2.png" alt="Shoes" class="rounded-xl" />
-            </figure>
+            <figure class="m-6 py-6 bg-[#7c7a7a0d]">
+              <img src="./images/prod2.png" alt="Shoes" class="rounded-xl py-4">
+          </figure>
             <div class="card-body items-center text-center">
               <div class="rating pb-4 pt-4">
                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-[#e7a745]" checked/>
@@ -98,11 +101,13 @@
               </div>
             </div>
           </div>
+          </button>
           <!-- 3rd card -->
+          <button id="" onclick="">
           <div class="card w-96 bg-base-100 shadow-2xl">
-            <figure class="px-10 pt-10">
-              <img src="images/prod3.png" alt="Shoes" class="rounded-xl" />
-            </figure>
+            <figure class="m-6 py-6 bg-[#1111110D]">
+              <img src="./images/prod3.png" alt="Shoes" class="rounded-xl py-4">
+          </figure>
             <div class="card-body items-center text-center">
               <div class="rating pb-4 pt-4">
                 <input type="radio" name="rating-3" class="mask mask-star-2 bg-[#e7a745]" />
@@ -117,15 +122,48 @@
               </div>
             </div>
           </div>
-        </div>
+        </button>
+        </div>   
         <!-- calculation area container -->
-            <div class="w-[400px] border border-solid shadow-2xl">
-                <div class="text-xl font-semibold mx-4">Have Coupon?</div>
-                <input type="file" class="file-input file-input-bordered file-input-secondary w-full max-w-xs mt-4 mx-4" placeholder="Coupon Code"/>
-                <div id="calculation-entry">
-                    
-                </div>
-            </div>
+        <div class="mt-8">
+          <!-- input section -->
+          <div class="bg-white p-8 rounded-lg ">
+              <p>Have a Coupon?</p>
+              <input id="coupon-field" type="text" class="w-2/4 mb-3 p-3 border border-solid rounded-lg bg-base-200 ml-4 mt-4 inline" placeholder="Coupon Code">
+              <button id="btn-apply" class="btn bg-[#E527B2] border-transparent text-white font-bold normal-case mb-5" disabled="">Apply</button>
+          </div>
+          <div class="ml-1 bg-white p-8 rounded-lg">
+              <hr>
+              <div id="items">
+              <p class="font-bold">1.  K. Utensils</p><p class="font-bold">2.  K. Utensils</p><p class="font-bold">3.  K. Accessories</p></div>
+              <hr>
+              <p class="my-3">
+                  <span class="font-bold">Total Price: </span>
+                  <span id="total-price">103</span> TK
+              </p>
+              <p class="my-3">
+                  <span class="font-bold">Discount: </span>
+                  <span id="discount-price">00</span> TK
+              </p>
+              <p class="my-3">
+                  <span class="font-bold">Total: </span>
+                  <span id="offer-price">00</span> TK
+              </p>
+              <button id="btn-purchase" onclick="my_modal_1.showModal()" class="btn bg-[#E527B2] border-transparent text-white font-bold mt-4 px-10 mx-auto normal-case">Make
+                  Purchase</button>
+              <!-- Open the modal using ID.showModal() method -->
+              <dialog id="my_modal_1" class="modal">
+                  <form method="dialog" class="modal-box">
+                      <img class="mx-auto" src="./images/congo.png" alt="">
+                      <h3 class="text-center font-bold text-3xl">Congratulations</h3>
+                      <p class="text-center py-4">Your Purchase the product</p>
+                      <div class="modal-action">
+                          <button id="btn-home" class="btn w-full normal-case">Go Home</button>
+                      </div>
+                  </form>
+              </dialog>
+          </div>
+      </div>
       </div>
       </section>     
       <!-- Kitchen ware section ends here -->
@@ -137,10 +175,11 @@
         <!-- product container -->
         <div class="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- 4th card -->
+          <button id="" onclick="">
           <div class="card w-96 bg-base-100 shadow-2xl">
-            <figure class="px-10 pt-10">
-              <img src="images/prod4.png" alt="Shoes" class="rounded-xl" />
-            </figure>
+            <figure class="m-6 py-6 bg-[#1111110D]">
+              <img src="./images/prod4.png" alt="Shoes" class="rounded-xl py-4">
+          </figure>
             <div class="card-body items-center text-center">
               <div class="rating pb-4 pt-4">
                 <input type="radio" name="rating-4" class="mask mask-star-2 bg-[#e7a745]" />
@@ -155,11 +194,13 @@
               </div>
             </div>
           </div>
+        </button>
           <!-- 5th card -->
+          <button id="" onclick="">
           <div class="card w-96 bg-base-100 shadow-2xl">
-            <figure class="px-10 pt-10">
-              <img src="images/prod5.png" alt="Shoes" class="rounded-xl" />
-            </figure>
+            <figure class="m-6 py-6 bg-[#1111110D]">
+              <img src="./images/prod5.png" alt="Shoes" class="rounded-xl py-4">
+          </figure>
             <div class="card-body items-center text-center">
               <div class="rating pb-4 pt-4">
                 <input type="radio" name="rating-5" class="mask mask-star-2 bg-[#e7a745]" />
@@ -174,11 +215,13 @@
               </div>
             </div>
           </div>
+        </button>
           <!-- 6th card -->
+          <button id="" onclick="">
           <div class="card w-96 bg-base-100 shadow-2xl">
-            <figure class="px-10 pt-10">
-              <img src="images/prod6.png" alt="Shoes" class="rounded-xl" />
-            </figure>
+            <figure class="m-6 py-6 bg-[#1111110D]">
+              <img src="./images/prod6.png" alt="Shoes" class="rounded-xl py-4">
+          </figure>
             <div class="card-body items-center text-center">
               <div class="rating pb-4 pt-4">
                 <input type="radio" name="rating-6" class="mask mask-star-2 bg-[#e7a745]" />
@@ -193,6 +236,7 @@
               </div>
             </div>
           </div>
+        </button>
         </div>
         <!-- calculation area container -->
             <div class="w-[400px]">
@@ -211,10 +255,11 @@
         <!-- product container -->
         <div class="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- 7th card -->
+          <button id="" onclick="">
           <div class="card w-96 bg-base-100 shadow-2xl">
-            <figure class="px-10 pt-10">
-              <img src="images/prod7.png" alt="Shoes" class="rounded-xl" />
-            </figure>
+            <figure class="m-6 py-6 bg-[#1111110D]">
+              <img src="./images/prod7.png" alt="Shoes" class="rounded-xl py-4">
+          </figure>
             <div class="card-body items-center text-center">
               <div class="rating pb-4 pt-4">
                 <input type="radio" name="rating-7" class="mask mask-star-2 bg-[#e7a745]" />
@@ -229,11 +274,13 @@
               </div>
             </div>
           </div>
+        </button>
           <!-- 8th card -->
+          <button id="" onclick="">
           <div class="card w-96 bg-base-100 shadow-2xl">
-            <figure class="px-10 pt-10">
-              <img src="images/prod8.png" alt="Shoes" class="rounded-xl" />
-            </figure>
+            <figure class="m-6 py-6 bg-[#1111110D]">
+              <img src="./images/prod8.png" alt="Shoes" class="rounded-xl py-4">
+          </figure>
             <div class="card-body items-center text-center">
               <div class="rating pb-4 pt-4">
                 <input type="radio" name="rating-8" class="mask mask-star-2 bg-[#e7a745]" />
@@ -248,11 +295,13 @@
               </div>
             </div>
           </div>
+        </button>
           <!-- 9th card -->
+          <button id="" onclick="">
           <div class="card w-96 bg-base-100 shadow-2xl">
-            <figure class="px-10 pt-10">
-              <img src="images/prod9.png" alt="Shoes" class="rounded-xl" />
-            </figure>
+            <figure class="m-6 py-6 bg-[#1111110D]">
+              <img src="./images/prod9.png" alt="Shoes" class="rounded-xl py-4">
+          </figure>
             <div class="card-body items-center text-center">
               <div class="rating pb-4 pt-4">
                 <input type="radio" name="rating-9" class="mask mask-star-2 bg-[#e7a745]" />
@@ -267,6 +316,7 @@
               </div>
             </div>
           </div>
+        </button>
         </div>
         <!-- calculation area container -->
             <div class="w-[400px]">
