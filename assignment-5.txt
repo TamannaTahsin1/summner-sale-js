@@ -1,2 +1,2 @@
 code link: https://github.com/Programming-Hero-Web-Course4/b8a5-summer-sale-TamannaTahsin1
-live link: https://64e2471ef0b98c7db390566e--splendorous-eclair-3d659e.netlify.app/
+live link: https://64e24e4312dded059eff08c8--splendorous-eclair-3d659e.netlify.app/
